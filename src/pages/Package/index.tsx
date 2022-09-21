@@ -1,5 +1,7 @@
-import React, { useEffect, useState, useCallback, FC } from 'react'
+// import local modules
 import path from 'path'
+// import third-party modules
+import React, { useEffect, useState, useCallback} from 'react'
 import {
   Tree,
   TreeNodeInfo,
@@ -15,7 +17,7 @@ import {
   OverlayToaster,
 } from '@blueprintjs/core'
 import numeral from 'numeral'
-import GitHubButton from 'react-github-btn'
+// import local modules
 import {
   getRepositoryUrl,
   PackageMetaDirectory,
@@ -227,21 +229,6 @@ function Package () {
               <div>{packageJson.description}</div>
             </>
           )}
-        </NavbarGroup>
-        <NavbarGroup
-          align="right"
-          style={{ height: HEADER_HEIGHT, fontSize: 0 }}
-        >
-          {/* @ts-expect-error */}
-          <GitHubButton
-            href="https://github.com/pd4d10/npmview"
-            aria-label="Star pd4d10/npmview on GitHub"
-            data-icon="octicon-star"
-            data-show-count
-            data-size="large"
-          >
-            Star
-          </GitHubButton>
         </NavbarGroup>
       </Navbar>
       <div

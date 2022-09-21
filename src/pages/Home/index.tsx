@@ -1,22 +1,16 @@
-import React, { FC } from 'react'
-import { Entry } from '../../entry'
-import { H1 } from '@blueprintjs/core'
+// import third-party modules
+import React from 'react'
+import { Typography } from '@arco-design/web-react';
+// import local modules
+import { HomeEntry } from '../../components/Home/entry';
 import { centerStyles } from '../../utils'
 
 function Home() {
   return (
     <div style={{ ...centerStyles, height: '100vh', flexDirection: 'column' }}>
-      <H1 style={{ paddingBottom: 20 }}>npmview</H1>
-      <Entry />
+      <Typography.Title>Source Code View</Typography.Title>
+      <HomeEntry  />
       <div style={{ height: '30vh' }} />
-      <a
-        className="github-fork-ribbon"
-        href="https://github.com/pd4d10/npmview"
-        data-ribbon="Fork me on GitHub"
-        title="Fork me on GitHub"
-      >
-        Fork me on GitHub
-      </a>
     </div>
   )
 }
